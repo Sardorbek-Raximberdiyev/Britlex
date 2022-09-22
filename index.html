@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Name of Project</title>
+  <title>Britlex</title>
 
   <!-- STYLES  -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -14,7 +14,7 @@
   <!-- SITE HEADER -->
 
   <header class="site-header">
-    <div class="site-header_container container">
+    <div class="site-header__container container">
       <a class="site-header__logo-link logo-link" href="#">
         <img class="logo-link__img" src="img/Britlex.svg" alt="icon" width="106" height="54">
       </a>
@@ -31,6 +31,22 @@
       <button class="site-header__open-button open-button button" type="button">
         <img class="open-button__img" src="img/open-button.svg" alt="" width="42" height="24">
       </button>
+      <section class="site-header__hamburger hamburger">
+        <div class="hamburger__header">
+          <button class="hamburger__open-btn open-btn button" type="button">
+            <img class="open-button__img" src="img/X.svg" alt="" width="20" height="20">
+          </button>
+        </div>
+        <nav class="hamburger__sitenav sitenav">
+          <ul class="sitenav__list">
+            <li class="sitenav__item"><a class="sitenav__link" href="#">Home</a></li>
+            <li class="sitenav__item"><a class="sitenav__link" href="#">Skills</a></li>
+            <li class="sitenav__item"><a class="sitenav__link" href="#">About Us</a></li>
+            <li class="sitenav__item"><a class="sitenav__link" href="#">Pricing</a></li>
+            <li class="sitenav__item"><a class="sitenav__link" href="#">Contacts</a></li>
+          </ul>
+        </nav>
+      </section>
     </div>
   </header>
 
@@ -38,9 +54,13 @@
     <div class="hero">
       <div class="hero__container container">
         <div class="hero__content">
-          <h1 class="hero____title">Learn Any Foreign Language</h1>
+          <h1 class="hero__title">Learn <br> Any Foreign Language</h1>
           <p class="hero__text">With our teachers who write a program for each student, you will be able to make your first sketch after the first lesson.</p>
           <a class="hero__button button" href="#">Get started</a>
+          <img class="hero__icon" src="img/light-bulb-svgrepo-com.svg" alt="icon">
+        </div>
+        <div class="hero__img-block">
+          <img class="hero__img" src="img/hero__img.png" alt="hero img" width="661" height="661" srcset="img/hero__img.png 1x, img/hero__img@2x.png 2x">
         </div>
       </div>
     </div>
