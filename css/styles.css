@@ -78,6 +78,7 @@ img {
   text-decoration: none;
   background-color: transparent;
   flex-shrink: 0;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -420,22 +421,25 @@ img {
 
   .hamburger__open-btn {
     justify-content: end;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: 0;
   }
+
   .open-btn {
     margin-left: auto;
   }
 
-  .open-button__img {
-  }
   .hamburger__sitenav {
     margin: 0;
   }
 
   .sitenav__list {
     display: block;
+    margin-right: 0;
+    margin-bottom: 62px;
   }
+
   .sitenav__item:not(:last-child) {
     margin-right: 0;
     margin-bottom: 20px;
@@ -443,6 +447,19 @@ img {
 
   .sitenav__link {
     font-weight: 500;
+  }
+
+  .hamburger__button {
+    padding: 16px 65px;
+    border: 2px solid var(--sitenav-color);
+    border-radius: 5px;
+    color: var(--black-color);
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  .hamburger__button:hover {
+    background-color: var(--sitenav-color);
+    color: #fff;
   }
 }
 
@@ -506,6 +523,27 @@ img {
     line-height: 24px;
     margin-bottom: 37px;
   }
+
+  .site-header-open .site-header__hamburger {
+    width: 100%;
+    height: 100%;
+    padding: 48px 33px;
+    background-color: #fff;
+    content: "";
+    z-index: 51;
+  }
+
+  .site-header-open .logo-link {
+    margin-top: 17px;
+  }
+
+  .sitenav__list {
+    margin-bottom: 80px;
+  }
+
+  .hamburger__button {
+    padding: 18px 117px;
+  }
 }
 
 @media only screen and (max-width: 420px) {
@@ -532,6 +570,16 @@ img {
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 5px;
+  }
+
+  .sitenav__list {
+    margin-bottom: 69px;
+  }
+
+  .hamburger__button {
+    width: 100%;
+    text-align: center;
+    padding: 14px 30px;
   }
 }
 
