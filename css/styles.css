@@ -908,6 +908,7 @@ margin-top: auto;
   .writing-box__img {
     width: 182px;
     min-height: 182px;
+    height: 182px;
     margin-bottom: 10px;
   }
 
@@ -984,16 +985,36 @@ margin-top: auto;
     width: 100%;
   }
 
-  .writing-box {
-    width: 100%;
+  .writing-box__img {
+    margin-top: auto;
+  }
+
+  .writing-box__text {
+    margin-bottom: 25px;
+  }
+
+  .writing-box__button {
+    margin-top: 0;
   }
 
   .reading-box {
     width: 100%;
   }
 
+  .reading-box__content {
+    height: auto;
+  }
+
+  .reading-box__text {
+    margin-bottom: 25px;
+  }
+
   .listening-box {
     width: 100%;
+  }
+
+  .listening-box__text {
+    margin-bottom: 25px;
   }
 
   img {
