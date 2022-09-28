@@ -692,6 +692,16 @@ margin-top: auto;
     margin-left: auto;
   }
 
+  .open-btn::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    content: "";
+    z-index: -40;
+  }
+
   .hamburger__sitenav {
     margin: 0;
   }
