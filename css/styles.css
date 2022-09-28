@@ -87,6 +87,7 @@ img {
   border-radius: 5px;
   border: 2px solid transparent;
   font-size: 20px;
+  text-align: center;
   background-color: var(--sitenav-color);
   color: #fff;
   transition: border-colo 0.3s ease,
@@ -278,15 +279,17 @@ img {
 }
 
 .skills__blocks {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-gap: 18px;
+  grid-template-columns: calc(100% / 3);
+  grid-template-areas: 'speaking-box writing-box reading-box' 'speaking-box listening-box listening-box';
 }
 
 .speaking-box {
+  grid-area: speaking-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100%/3 - 18px);
   padding: 35px 22px;
   border-radius: 10px;
   background-color: #f5f5f5;
@@ -333,9 +336,9 @@ img {
 }
 
 .writing-box {
+  grid-area: writing-box;
   display: flex;
   flex-direction: column;
-  width: calc(50% - 9px);
   padding: 44px 40px;
   border-radius: 10px;
   background-color: #f5f5f5;
@@ -369,9 +372,9 @@ margin-top: auto;
 }
 
 .reading-box {
+  grid-area: reading-box;
   display: flex;
   flex-direction: column;
-  width: calc(50% - 9px);
   padding: 44px 40px;
   border-radius: 10px;
   background-color: #f5f5f5;
@@ -402,11 +405,10 @@ margin-top: auto;
 }
 
 .listening-box {
+  grid-area: listening-box;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   padding: 44px 25px 44px 44px;
-  margin-top: 20px;
   border-radius: 10px;
   background-color: #f5f5f5;
 }
@@ -454,7 +456,6 @@ margin-top: auto;
     width: 520px;
     height: 520px;
   }
-
 }
 
 
@@ -506,10 +507,6 @@ margin-top: auto;
     margin-bottom: 52px;
   }
 
-  .speaking-box {
-    width: calc(100%/3 - 13px);
-  }
-
   .speaking-box__img {
     width: 260px;
     height: 260px;
@@ -526,7 +523,6 @@ margin-top: auto;
   }
 
   .writing-box {
-    width: calc(50% - 6px);
     padding: 35px 22px;
   }
 
@@ -540,7 +536,6 @@ margin-top: auto;
   }
 
   .reading-box {
-    width: calc(50% - 6px);
     padding: 35px 22px;
   }
 
@@ -555,7 +550,6 @@ margin-top: auto;
 
   .listening-box {
     padding: 35px 22px;
-    margin-top: 13px;
   }
 
   .listening-box__img {
@@ -578,8 +572,13 @@ margin-top: auto;
     width: 400px;
     height: 400px;
   }
+}
 
-
+@media only screen and (max-width: 800px) {
+  .black-button {
+    width: 100%;
+    padding: 15px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -725,7 +724,6 @@ margin-top: auto;
   }
 
   .speaking-box {
-    width: calc(100%/3 - 10px);
     padding: 20px 12px;
   }
 
@@ -739,6 +737,10 @@ margin-top: auto;
   .skills___title {
     font-size: 30px;
     margin-bottom: 37px;
+  }
+
+  .skills__blocks {
+    grid-gap: 10px;
   }
 
   .skills__blocks h2 {
@@ -762,18 +764,10 @@ margin-top: auto;
     padding: 20px 12px;
   }
 
-  .writing-box {
-    width: calc(50% - 5px);
-  }
-
   .writing-box__img {
     width: 200px;
     height: 200px;
     margin-bottom: 10px;
-  }
-
-  .reading-box {
-    width: calc(50% - 5px);
   }
 
   .reading-box__img {
@@ -784,7 +778,6 @@ margin-top: auto;
 
   .listening-box {
     padding: 22px 12px;
-    margin-top: 10px;
     align-items: flex-end;
   }
 
@@ -884,12 +877,13 @@ margin-top: auto;
   }
 
   .skills__blocks {
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-areas: 'speaking-box writing-box' 'reading-box listening-box';
   }
 
   .speaking-box {
-    width: calc(50% - 15px);
-    margin-bottom: 30px;
+    align-self: start;
   }
 
   .speaking-box__img {
@@ -901,8 +895,6 @@ margin-top: auto;
   .writing-box {
     display: flex;
     flex-direction: column;
-    width: calc(50% - 15px);
-    margin-bottom: 30px;
     padding: 20px 12px;
   }
 
@@ -926,7 +918,6 @@ margin-top: auto;
   .reading-box {
     display: flex;
     flex-direction: column;
-    width: calc(50% - 15px);
     padding: 20px 12px;
   }
 
@@ -950,11 +941,11 @@ margin-top: auto;
   .listening-box {
     display: flex;
     flex-direction: column;
-    width: calc(50% - 15px);
     margin-top: 0;
   }
 
   .listening-box__img {
+    order: -1;
     width: 206px;
     height: 137px;
     margin-bottom: 10px;
@@ -984,24 +975,30 @@ margin-top: auto;
     height: 350px;
   }
 
+  .skills__blocks {
+    grid-template-columns: 100%;
+    grid-template-areas: 'speaking-box' 'writing-box' 'reading-box' 'listening-box';
+  }
+
   .speaking-box {
-    width: calc(50% - 6px);
-    margin-bottom: 12px;
+    width: 100%;
   }
 
   .writing-box {
-    width: calc(50% - 6px);
-    margin-bottom: 12px;
+    width: 100%;
   }
 
   .reading-box {
-    width: calc(50% - 6px);
-    margin-bottom: 12px;
+    width: 100%;
   }
 
   .listening-box {
-    width: calc(50% - 6px);
-    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
