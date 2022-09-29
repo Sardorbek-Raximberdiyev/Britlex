@@ -3,6 +3,7 @@
   --sitenav-color: #263238;
   --black-color: #000;
   --text-color: #8F95A5;
+  --dt-color: #2A3246;
 }
 
 
@@ -35,7 +36,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background-color: #fff;
-  color: #222;
+  color: var(--text-color);
 }
 
 img {
@@ -270,12 +271,17 @@ img {
   display: none;
 }
 
-.skills___title {
+.skills__container {
+  padding-bottom: 100px;
+}
+
+.skills__title {
   margin-top: 0;
   margin-bottom: 96px;
   font-size: 48px;
   line-height: 80px;
   text-align: center;
+  color: var(--black-color);
 }
 
 .skills__blocks {
@@ -359,6 +365,7 @@ margin-top: auto;
   margin-bottom: 5px;
   font-size: 30px;
   line-height: 55px;
+  color: var(--sitenav-color);
 }
 
 .writing-box__text {
@@ -396,6 +403,7 @@ margin-top: auto;
   margin-bottom: 5px;
   font-size: 30px;
   line-height: 55px;
+  color: var(--sitenav-color);
 }
 
 .reading-box__text {
@@ -436,6 +444,280 @@ margin-top: auto;
   display: none;
 }
 
+
+/* ABOUT US */
+
+.about-us__container {
+  display: grid;
+  grid-template-areas: 'title img' 'content img';
+  align-self: start;
+  padding-top: 152px;
+  padding-bottom: 108px;
+}
+
+.about-us__content {
+  grid-area: content;
+  max-width: 635px;
+  margin-right: 35px;
+}
+
+.about-us__title {
+  grid-area: title;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 60px;
+  color: var(--black-color);
+}
+
+.about-us__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.about-us__card {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.card__box {
+  text-align: center;
+}
+
+.card__box:not(:last-child) {
+  margin-right: 15px;
+}
+
+.card__title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 80px;
+  color: var(--dt-color);
+}
+
+.card__text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.about-us__img {
+  grid-area: img;
+  display: block;
+  width: 500px;
+  height: 500px;
+}
+
+
+  /* PRICING */
+
+.pricing__container {
+  padding-top: 80px;
+  padding-bottom: 145px;
+}
+
+.pricing__title {
+  margin-top: 0;
+  margin-bottom: 57px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 80px;
+  text-align: center;
+  color: var(--black-color);
+}
+
+.pricing__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.pricing__item {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3 - 20px);
+}
+
+.pricing__item-box-img {
+  display: block;
+  min-height: 340px;
+}
+
+.pricing__item-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+.pricing__item-title {
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 48px;
+  color: var(--sitenav-color);
+}
+
+.pricing__item-text {
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.pricing__item-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2px 14px;
+  margin-top: auto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  border-radius: 5px;
+  align-items: center;
+  color: var(--text-color);
+  background-color: #eee;
+}
+
+.pricing__item-link span {
+  font-size: 30px;
+  line-height: 45px;
+  color: var(--sitenav-color);
+  align-items: center;
+}
+
+
+/* CONTACT US */
+
+.contact__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 112px;
+  padding-bottom: 133px;
+  border-bottom: 1px solid #C4C4C4;
+  margin-bottom: 20px;
+}
+
+.contact__img {
+  width: 477px;
+  height: 429px;
+  margin-right: 20px;
+}
+
+.contact__content {
+  max-width: 776px;
+}
+
+.contact__title {
+  margin-top: 0;
+  margin-bottom: 37px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 80px;
+  color: black;
+}
+
+.contact__text {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.contact__form {
+  position: relative;
+  display: flex;
+}
+
+.contact__input {
+  width: 450px;
+  padding: 33px 28px;
+  margin-right: 12px;
+  border-radius: 10px;
+  border: 2px solid #8F95A5;
+}
+
+.contact__discription {
+  position: absolute;
+  display: none;
+  top: 32px;
+  left: 410px;
+  width: 25px;
+  height: 25px;
+}
+
+.error-message {
+  position: absolute;
+  padding-top: 20px;
+  display: none;
+  width: 450px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  border-radius: 0 0 5px 5px;
+  left: 0;
+  bottom: -30px;
+  font-style: italic;
+  color: #fff;
+  white-space: nowrap;
+  background-color: #fa5959;;
+  z-index: -1;
+}
+
+.contact__button {
+  width: 264px;
+  border-radius: 10px;
+}
+
+.contact__input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: red;
+}
+.contact__input:not(:focus):not(:placeholder-shown):valid {
+  border-color: green;
+}
+
+.contact__input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+  display: block;
+}
+
+.contact__input:not(:focus):not(:placeholder-shown):invalid ~  .contact__discription {
+  display: block;
+}
+
+
+/* FOOTER */
+
+.site-footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 35px;
+  padding-bottom: 60px;
+}
+
+
+.referance__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.referance__item {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.referance__item:not(:last-child) {
+  margin-right: 15px;
+}
 
 @media only screen and (max-width: 1220px) {
   .hero__title {
@@ -503,7 +785,7 @@ margin-top: auto;
     height: 460px;
   }
 
-  .skills___title {
+  .skills__title {
     margin-bottom: 52px;
   }
 
@@ -564,6 +846,35 @@ margin-top: auto;
   .black-button {
     font-size: 18px;
     padding: 15px 41px;
+  }
+
+
+  /* ABOUT US  */
+
+  .about-us__title {
+    font-size: 36px;
+    margin-bottom: 13px;
+  }
+
+  .about-us__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .card__title {
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .card__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .about-us__img {
+    width: 336px;
+    height: 336px;
   }
 }
 
@@ -745,7 +1056,7 @@ margin-top: auto;
   }
 
 
-  .skills___title {
+  .skills__title {
     font-size: 30px;
     margin-bottom: 37px;
   }
@@ -802,6 +1113,37 @@ margin-top: auto;
     font-size: 16px;
     text-align: center;
     padding: 13px;
+  }
+
+  /* ABOUT US  */
+
+  .about-us__content {
+    margin-right: 10px;
+  }
+
+  .about-us__title {
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .about-us__text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .card__title {
+    font-size: 22px;
+    line-height: 42px;
+  }
+
+  .card__text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .about-us__img {
+    width: 285px;
+    height: 285px;
   }
 }
 
@@ -885,6 +1227,10 @@ margin-top: auto;
 
   .hamburger__button {
     padding: 18px 117px;
+  }
+
+  .skills__container {
+    padding-bottom: 44px;
   }
 
   .skills__blocks {
@@ -979,6 +1325,56 @@ margin-top: auto;
     flex-wrap: wrap;
   }
 
+
+  /* CONTACT US */
+
+  .about-us__container {
+    grid-template-areas: 'title' 'img' 'content';
+    align-self: center;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .about-us__content {
+    margin-right: 0;
+  }
+
+  .about-us__title {
+    order: -2;
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 23px;
+  }
+
+  .about-us__text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .about-us__card {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .card__title {
+    font-size: 22px;
+    line-height: 42px;
+  }
+
+  .card__text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .about-us__img {
+    display: block;
+    margin: 0 auto;
+    order: -1;
+    width: 352px;
+    height: 352px;
+    margin-bottom: 25px;
+  }
+
 }
 
 @media only screen and (max-width: 420px) {
@@ -1032,6 +1428,25 @@ margin-top: auto;
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* ABOUT US */
+  .about-us__card {
+    flex-direction: column;
+  }
+
+  .card__box:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .card__title {
+    font-size: 24px;
+  }
+
+  /* .card__text {
+
+  } */
+
 }
 
 @media only screen and (max-width: 380px) {
